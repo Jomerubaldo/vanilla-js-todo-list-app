@@ -258,6 +258,7 @@ nav a p {
   font-size: 1rem;
   font-weight: 500;
   color: #111318;
+  text-wrap: balance;
 }
 
 /* Right section (buttons) */

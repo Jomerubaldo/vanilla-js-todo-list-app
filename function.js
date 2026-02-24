@@ -109,6 +109,13 @@ function renderTodos() {
       circle.appendChild(checkImg);
     }
 
+    // even the circle button is not click when whole box is click its check the done task
+    todoItem.onclick = function () {
+      todos[index].completed = !todos[index].completed;
+      saveTodos();
+      renderTodos();
+    };
+
     // Right section (buttons)
     const rightSection = document.createElement('div');
     rightSection.className = 'todo-actions';

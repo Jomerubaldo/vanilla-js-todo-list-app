@@ -65,6 +65,10 @@ Since tasks are stored in an array of objects, length correctly reflects the num
 
 The counter updates dynamically whenever a task is added or removed.
 
+7. Implement whole box checked for task done
+
+Using with the same logic for the circle button i created an onlick with parent div box so even the box is click for task its automatic implement task done with check mark icon.
+
 🐞 Issues Encountered & Fixes
 ✅ 1. Local Storage Not Saving Immediately
 
@@ -93,6 +97,14 @@ The total task count now updates automatically whenever tasks are added or delet
 
 Improvement:
 Enhanced the modal design to make it more visually appealing instead of plain styling.
+
+✅ 6. Text is not wrap to balance
+
+Issue:
+When adding an task and using long description its too long its expand outside the box width set
+
+Fix:
+In text for task i add an text-wrap: balance; when text is too long its adjust based on box width
 
 📚 Concepts Practiced
 
