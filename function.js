@@ -86,8 +86,15 @@ function renderTodos() {
     // img
     const checkImg = document.createElement('img');
 
-    // Text
-    circle.onclick = function () {
+    todoItem.onclick = function () {
+      // no need stop event bubbling because siya ang nauna
+      todos[index].completed = !todos[index].completed;
+      saveTodos();
+      renderTodos();
+    };
+
+    circle.onclick = function (event) {
+      event.stopPropagation(); //  stop event bubbling
       todos[index].completed = !todos[index].completed;
       saveTodos();
       renderTodos();
@@ -108,13 +115,6 @@ function renderTodos() {
       checkImg.style.height = '20px';
       circle.appendChild(checkImg);
     }
-
-    // even the circle button is not click when whole box is click its check the done task
-    todoItem.onclick = function () {
-      todos[index].completed = !todos[index].completed;
-      saveTodos();
-      renderTodos();
-    };
 
     // Right section (buttons)
     const rightSection = document.createElement('div');

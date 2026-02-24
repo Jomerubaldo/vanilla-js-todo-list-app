@@ -106,6 +106,16 @@ When adding an task and using long description its too long its expand outside t
 Fix:
 In text for task i add an text-wrap: balance; when text is too long its adjust based on box width
 
+✅ 7. Box clicking done task without cliking button task done
+
+Issue:
+
+When i click the box for task done its works show done check but when i click button for task done its not work.
+
+Fix:
+
+I add an stopPropagation() to stop event bubbling so each of them onlick button and box have seperate function.
+
 📚 Concepts Practiced
 
 DOM Manipulation
