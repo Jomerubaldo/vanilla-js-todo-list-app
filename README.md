@@ -1,25 +1,113 @@
-# TODOLIST With CRUD Operation:
+📝 To-Do List with CRUD Operations
 
-## 1.Create an delete button
+This project is a simple To-Do List application built using JavaScript. It implements full CRUD (Create, Read, Update, Delete) functionality and uses Local Storage to persist data.
 
-## 2. para gawin yung save to local storage is need mo muna i convert yung value mo into array and kapag array na siya tsaka mona siya ma pwede ma save sa local storage
+🚀 Features & Implementation
 
-## 3. kapag mag eedit ka naman gagamitan mo siya ng index
+1. Create and Delete Tasks
 
-## 4. gumawa ng done task ang nangyari is gumamit ng object instead of array para makita kung yung task is done naba or hindi tsaka gagawan ng function logic para e check kung yung task is done or not
+Users can add new tasks to the list.
 
-## 5. gumawa ako ng check mark kapag done nayung task ganto ko siya ginawa gumawa mona ako ng createElement na para sa img tapos ininsert ko siya sa nagchecheck kung tapos nayon task tapos nag appendChild lang ako tapos tinawag koyong checkImg kona ginawa.
+Each task includes a delete button to remove it from the list.
 
-## 6. gumawa ng concept na mabibiling niya kung ilang nayon task an nasa loob ng todlist ganto ko siya ginawa call ko muna refference niya na span tapos gumamit ako ng todos.length para malaman ko kung ilan nayung length ng nasa object of aaray ko kasi naka object ako
+2. Save Data to Local Storage
 
-# ECOUNTER ERROR OR BUG NEED TO FIX TOMORROW:
+Before saving to Local Storage, the task data is converted into an array.
 
-## solve na 1. kapag nag add ako ng list hindi agad siya napupunta sa local storage pero kapag naka add nako tapos nag edit is don palang siya nanasasave sa local storage
+Once stored as an array (or array of objects), it can be saved using localStorage.
 
-## solve na 2. need implement yung cliclick yung task tapos may style na may guhit para malaman na tapos nayon task nayon
+This ensures tasks remain available even after refreshing the page.
 
-## solve na 3. need gawan ng modal yung edit para mas maganda tignan kapag nag eedit ng newTask
+3. Edit Task Using Index
 
-## solve na 4. need din dapat malaman kung ilan na yung task an nalagay ko real time makikita siya
+When editing a task, the application uses the index of the selected item.
 
-## 5. need improve yung modal for edit para maganda tignan plain lang kasi siya.
+The index helps identify which specific task should be updated inside the array.
+
+4. Mark Task as Done (Using Objects)
+
+Instead of storing tasks as plain strings, each task is stored as an object.
+
+Each object contains:
+
+The task text
+
+A completed (boolean) property
+
+A function checks whether the task is completed or not and updates the UI accordingly.
+
+Example structure:
+
+{
+text: "Study JavaScript",
+completed: false
+}
+
+5. Checkmark Icon for Completed Tasks
+
+When a task is marked as completed:
+
+An <img> element is created using createElement().
+
+The checkmark image is appended to the task using appendChild().
+
+The image appears only when the task is marked as done.
+
+6. Real-Time Task Counter
+
+A <span> element is used to display the total number of tasks.
+
+The total count is calculated using:
+
+todos.length
+
+Since tasks are stored in an array of objects, length correctly reflects the number of tasks.
+
+The counter updates dynamically whenever a task is added or removed.
+
+🐞 Issues Encountered & Fixes
+✅ 1. Local Storage Not Saving Immediately
+
+Issue:
+When adding a task, it was not immediately saved to Local Storage. It only saved after editing a task.
+
+Fix:
+Ensured that the save-to-localStorage function is called every time a task is added.
+
+✅ 2. Strikethrough Style for Completed Tasks
+
+Improvement:
+Added a click event that applies a line-through style to visually indicate that a task is completed.
+
+✅ 3. Edit Modal Implementation
+
+Improvement:
+Implemented a modal for editing tasks instead of editing inline, making the UI cleaner and more user-friendly.
+
+✅ 4. Real-Time Task Count
+
+Improvement:
+The total task count now updates automatically whenever tasks are added or deleted.
+
+✅ 5. Improved Edit Modal Design
+
+Improvement:
+Enhanced the modal design to make it more visually appealing instead of plain styling.
+
+📚 Concepts Practiced
+
+DOM Manipulation
+
+Event Handling
+
+Array Methods
+
+Objects in JavaScript
+
+Local Storage
+
+Dynamic UI Updates
+
+Modal Implementation
+
+CRUD Operations

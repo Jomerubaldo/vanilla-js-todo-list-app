@@ -62,7 +62,6 @@ saveEdit.addEventListener('click', function () {
   editModal.style.display = 'none'; // automatic close modal after click done
 });
 
-// cancel edit modal
 cancelEdit.addEventListener('click', function () {
   editModal.style.display = 'none';
 });

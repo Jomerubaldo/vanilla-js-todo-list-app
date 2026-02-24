@@ -354,7 +354,8 @@ nav a p {
   font-family: sans-serif;
 }
 
-#input-container {
+#task-name {
+  padding-bottom: 5px;
 }
 
 #modal-input {
