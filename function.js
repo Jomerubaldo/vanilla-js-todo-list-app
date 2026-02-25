@@ -84,7 +84,7 @@ function renderTodos() {
     const circle = document.createElement('div');
     circle.className = 'todo-circle';
     // img
-    const checkImg = document.createElement('img');
+    const checkIcon = document.createElement('span');
 
     todoItem.onclick = function () {
       // no need stop event bubbling because siya ang nauna
@@ -109,16 +109,19 @@ function renderTodos() {
     if (todo.completed) {
       text.style.textDecoration = 'line-through';
       text.style.opacity = '0.6';
-      checkImg.src =
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flat_tick_icon.svg/20px-Flat_tick_icon.svg.png';
-      checkImg.style.width = '20px';
-      checkImg.style.height = '20px';
-      circle.appendChild(checkImg);
+      checkIcon.innerHTML = `<i class="fa-solid fa-check"></i>`;
+      checkIcon.style.width = '20px';
+      checkIcon.style.height = '20px';
+      checkIcon.style.borderRadius = '50%';
+      checkIcon.style.backgroundColor = '#ffffff';
+      checkIcon.style.color = '#32cd32';
+      circle.appendChild(checkIcon);
     }
 
     // Right section (buttons)
     const rightSection = document.createElement('div');
     rightSection.className = 'todo-actions';
+
     // Edit button
     const editBtn = document.createElement('button');
     editBtn.className = 'todo-btn todo-btn-edit';
