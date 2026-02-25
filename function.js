@@ -115,6 +115,7 @@ function renderTodos() {
       checkIcon.style.borderRadius = '50%';
       checkIcon.style.backgroundColor = '#ffffff';
       checkIcon.style.color = '#32cd32';
+      checkIcon.style.border = '1px solid #dbdfe6';
       circle.appendChild(checkIcon);
     }
 
