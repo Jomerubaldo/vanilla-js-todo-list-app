@@ -1,4 +1,4 @@
-📝 To-Do List with CRUD Operations
+📝 Vanilla JavaScript To-Do List with CRUD Operations
 
 This project is a simple To-Do List application built using JavaScript. It implements full CRUD (Create, Read, Update, Delete) functionality and uses Local Storage to persist data.
 
